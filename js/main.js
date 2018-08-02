@@ -19,8 +19,12 @@
     theme: require('ace/theme/tomorrow_night'),
     mode: 'ace/mode/python',
   });
+  (() => {
+    const cachedCode = window.localStorage.getItem('cachedCode');
+    if (!!cachedCode) editor.setValue(cachedCode);
+  })();
   editor.getSession().on('change', () => {
-    // TODO save?
+    window.localStorage.setItem('cachedCode', editor.getValue());
   });
 
   // set up output
@@ -169,4 +173,6 @@
 
   // begin render loop
   animationFrame();
+  editor.focus();
+  editor.clearSelection();
 });

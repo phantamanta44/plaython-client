@@ -1,0 +1,114 @@
+body {
+    background-color: #222529;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: 'Source Code Pro', 'Courier New', monospace;
+}
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    width: 100vw; height: 100vh;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.col {
+    flex: 1;
+}
+
+#left {
+    padding-bottom: 16px;
+    display: flex;
+    flex-flow: column;
+}
+
+#controls {
+    padding: 8px;
+    text-align: center;
+}
+
+#code {
+    flex: 1 0;
+}
+
+.button {
+    padding: 6px 12px;
+    display: inline-block;
+    background-color: #2e3237;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #363a40;
+}
+
+.button.disabled, .button.disabled:hover {
+    background-color: #2e3237;
+    color: rgba(255, 255, 255, 0.64);
+    cursor: not-allowed;
+}
+
+#out {
+    width: 100%; height: 100%;
+    padding: 16px;
+    display: flex;
+    flex-flow: column;
+}
+
+#display {
+    width: 100%; height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    background-color: #000;
+}
+
+#canvas {
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+}
+
+#loader-container {
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    display: none;
+    text-align: center;
+}
+
+#loader-container.active {
+    display: block;
+}
+
+#loader-helper {
+    width: 0; height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#console {
+    width: 100%; height: 100%;
+    padding-top: 16px;
+    display: flex;
+    flex-flow: column;
+    flex: 1 0;
+}
+
+#console-text {
+    padding: 16px;
+    background-color: #111319;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    flex: 1;
+}
+
+.err {
+    color: #c54445;
+}

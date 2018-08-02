@@ -41,6 +41,7 @@ body {
     padding: 6px 12px;
     display: inline-block;
     background-color: #2e3237;
+    color: rgba(255, 255, 255, 0.87);
     transition: background-color 0.3s;
     cursor: pointer;
 }
@@ -50,7 +51,7 @@ body {
 }
 
 .button.disabled, .button.disabled:hover {
-    background-color: #2e3237;
+    background-color: #25282c;
     color: rgba(255, 255, 255, 0.64);
     cursor: not-allowed;
 }
